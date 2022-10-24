@@ -76,14 +76,6 @@ An algorithm's Big O Notation is determined by how long the algorithm takes to r
 
 It offers you an approximation of how the software will respond in response to being “scaled” to address major (more complicated) issues.
 
-A program that scales linearly—that is, O(n) slows down, just like a line does, twice as many, four times the work, four times the work, and four times the length—a simple proportion.
-
-A quadratic program, O(n2), is significantly faster than that, two times more time than work, four times longer. And the work is four times longer, seventeen times longer. It’s around 10,000 times the length of work start to increase to 100 times.
-
-Thus, when employed in production contexts in which the demands are too great, a program with O(n2) is becoming impossible. You can’t chuck extra hardware to get it “faster” easy.
-
-Even mild inputs become too huge when your software is O(2n). Add one additional item to the entry and twice the time. Two things are added and double again.
-
 
 ## Some Examples of Big O Notation?
 
@@ -93,21 +85,12 @@ function sumNumbers(n1, n2) {
   console.log(n1 + n2)
 }
 
-function printMultiple(n) {
-  for (let i = 0; i < 10; i++) {
-    console.log(i * n)
-  }
-}
-
-var arr = [ 1,2,3,4,5];
-arr[2]; // => 3
 ```
 
-In the first line function (sumNumbers) contains two input values (n1 and n2), and the number of operations (just one operation is included in the function body) does not change, therefore the run-time does not rely on the input. It always takes place at a steady time – O (1).
+In the first line function (sumNumbers) contains two input values (n1 and n2), and the number of operations (just one operation is included in the function body) does not change, therefore the run-time does not rely on the input. So not matter what this algo will go through one unit of work.
 
-The second function (printMultiple) sounds intriguing, we have a foor loop and have seen the correlation between a loop and a larger runtime. Well, it is not since the loop only runs 10 times, so again there are only 10 multiples (we may claim we have 10 operations, but we shall show that we can reduce the Big O expressions and the runtime will be O(1) again).
+The "complexity" of this function is `O(1)`.
 
-Now in next line Why is it always constant to access arrays? Due to the structuration of arrays, array items are in a continuous sequence of memory, thus any array item is calculated by performing just one operation, using a form – memory address + item size * index.
 
 ### Example 2:- O(n)
 
@@ -131,6 +114,10 @@ function loggingNumbers2(n) {
 
 O(n) specifies an algorithm which increases its performance directly and linearly in relation to the input size. The complexity of times rises as the size rises and at the same rate grows.
 
+The "complexity" of `loggingNumbers` and `loggingNumbers2` is `O(n)`.
+
+This means that it's a linear graph.
+
 The first loggingNumbers method uses an argument, and the log is controlling how much iterations the loop will run. The loop depends upon that argument. If we transmit 5, we’ll get numbers from 1 to 5, if we send 10, we’ll get numbers from 1 to 10, and so on. Because the output is connected to the input, this approach expands linearly – O (n).
 
 In the second loggingNumbers2 method, with two loops running one after the other (they are not nested). Therefore, one runs at n, another runs at n, so the last run is O (2n). Or is it? Or is it that? Again the equation may be simplified, the constant removed, and merely O(n) may be used as runtime.
@@ -146,8 +133,18 @@ function multiplicationTable(n) {
   }
 }
 ```
+The "complexity" of `multiplicationTable` is `O(n^2)`.
 
 There are two methods in the multiplicationTable for loops, each is iterated over n, which means that n * n is total. O(n2) is the time to run. The execution time of the nested loops equals the number of loops that are nested, if we had 3 loops the execution time was O(n3). And so forth. And so forth. Check the following visualization charts to show how much curve the runtime is at if the runtime is quadratic or cubic, such that the runtime grows with increasing the input, thereby reducing the efficiency of the procedure.
+
+
+## Comparison of O(1), O(n), O(n^2)
+
+Notice that the further right of the horizontal axis (x axis) you go, the vertical axis (y axis) goes up fastest for `O(n^2)`, slower for `O(n)` and constant for `O(1)`.
+
+This means that `O(n^2)` runs slower than `O(n)`, which runs slower than `O(1)`.
+
+![runtime_comparison.png](https://github.com/pavankat/big-o-in-plain-english/blob/master/runtime_comparison.png?raw=true)
 
 ## Conclusion
 Algorithm complexity is used to measure the performance of an algorithm in terms of time taken and the space consumed.
