@@ -10,7 +10,6 @@ There are two components to this lesson:
 ## Learning Objectives
 By the end of this lesson, you'll be able to:
 - Explain how Big O notation is used to describe algorithms.
-- Define constant, linear, quadratic, logarithmic, and factorial Big O runtimes.
 - Analyze algorithms to determine their Big O runtime.
 
 ## Prerequisites
@@ -32,12 +31,48 @@ What we want to do with this knowledge is to improve the performance of a softwa
 ### First is is important to know what a `computer algorithm` is. 
 A `computer algorithm` is a series of steps the machine takes in order to take an input and compute an output. There are several ways to measure its performance. One of the metrics used to compare algorithms is using this notion of algorithm complexity.
 
+Algorithms are basically functions.
+
+Functions that are algorithms:
+
+1. take in arguments
+
+2. explicitly return values
+
+#### 1.1 Example of an algorithm
+
+Algorithm that counts the number of vowels in a word and returns the count:
+
+```js
+function countVowels(word) {
+    var vowels = ['a', 'i', 'e', 'o', 'u'];
+    var count = 0;
+		for (var i = 0; i < word.length; i++) {
+        for (var j = 0; j < vowels.length; j++) {
+            if (word[i] === vowels[j]) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+```
+
 Algorithm complexity can be further divided into two types: time complexity and space complexity. Let's briefly touch on these two:
 
 The time complexity, as the name suggests, refers to the time taken by the algorithm to complete its execution.
 The space complexity refers to the memory occupied by the algorithm. In this lecture we will focus on time complexity. 
 
+## What is Big O? 
+
 ![Big O chart](https://www.freecodecamp.org/news/content/images/2021/06/1_KfZYFUT2OKfjekJlCeYvuQ.jpeg)
+
+Big O is short for Big O Notation.
+
+Big O is how programmers talk about scalability of algorithms.
+
+An algorithm's Big O Notation is determined by how long the algorithm takes to return output in the **worst case scenario**.
 
 It offers you an approximation of how the software will respond in response to being “scaled” to address major (more complicated) issues.
 
@@ -49,7 +84,6 @@ Thus, when employed in production contexts in which the demands are too great, a
 
 Even mild inputs become too huge when your software is O(2n). Add one additional item to the entry and twice the time. Two things are added and double again.
 
-## 
 
 ## Some Examples of big O notation?
 
