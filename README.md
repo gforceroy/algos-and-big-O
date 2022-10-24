@@ -115,6 +115,13 @@ function multiplicationTable(n) {
 
 There are two methods in the multiplicationTable for loops, each is iterated over n, which means that n * n is total. O(n2) is the time to run. The execution time of the nested loops equals the number of loops that are nested, if we had 3 loops the execution time was O(n3). And so forth. And so forth. Check the following visualization charts to show how much curve the runtime is at if the runtime is quadratic or cubic, such that the runtime grows with increasing the input, thereby reducing the efficiency of the procedure.
 
+## Conclusion
+Algorithm complexity is used to measure the performance of an algorithm in terms of time taken and the space consumed.
+
+Big(O) notation is one of the most commonly used metrics for measuring algorithm complexity. In this article you saw how to find different types of time and space complexities of algorithms using Big(O) notation. You'll now be better equipped to make trade-off decisions based on complexity in the future.
+
+
+
 
 ## Additional Resources
 - [The Big O Cheat Sheet](http://bigocheatsheet.com/) is the authority on Big O complexities.
