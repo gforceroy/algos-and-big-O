@@ -85,7 +85,7 @@ Thus, when employed in production contexts in which the demands are too great, a
 Even mild inputs become too huge when your software is O(2n). Add one additional item to the entry and twice the time. Two things are added and double again.
 
 
-## Some Examples of big O notation?
+## Some Examples of Big O Notation?
 
 ### Example 1:- O(1)
 ```
